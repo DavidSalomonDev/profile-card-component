@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+:root {
+    --primary-color: hsl(185, 75%, 39%);
+    --secondary-color: hsl(229, 23%, 23%);
+    --terciary-color: hsl(227, 10%, 46%);
+    --gray: hsl(0, 0%, 59%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    /* Changing default rem size to 10px to make images and font responsive*/
+    font-size: 62.5%;
+}
+
+body,
+footer,
+.container,
+.card-container,
+.data,
+.stats {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative;
+}
+
+body {
+    box-sizing: border-box;
+    background-color: #F0F0F0;
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Kumbh Sans', sans-serif;
+
+}
+
+.container {
+    background-color: var(--primary-color);
+    width: 144rem;
+    height: 72rem;
+}
+
+.container::before{
+    background-image: url(./images/bg-pattern-top.svg);
+    background-size: cover;
+    transform: rotate(15deg);
+    content: '';
+    height: 75rem;
+    width: 75rem;
+    position: absolute;
+    top: -30rem;
+    left: -10rem;
+}
+
+.container::after{
+    background-image: url(./images/bg-pattern-bottom.svg);
+    background-size: cover;
+    transform: rotate(15deg);
+    content: '';
+    height: 95rem;
+    width: 95rem;
+    position: absolute;
+    bottom: -60rem;
+    right: -20rem;
+}
+
+.card-container {
+    width: 35rem;
+    height: 37.5rem;
+    border-radius: 1.5rem;
+    box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.3);
+    background-color: #fff;
+    position: relative;
+    z-index: 100;
+}
+
+.header {
+    height: 14rem;
+
+}
+
+header .cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+header .pic {
+    position: absolute;
+    top: 22%;
+    left: 35%;
+    border-radius: 50%;
+    border: .5rem solid #fff;
+}
+
+.data {
+    margin-top: -1.6rem;
+    font-size: 1.8rem;
+    border-bottom: 1px solid var(--gray);
+    width: 100%;
+}
+
+.data .name {
+    font-weight: bold;
+    padding-bottom: 1rem;
+}
+
+.data span,
+.data .city {
+    font-weight: 100;
+    color: var(--gray);
+    padding-bottom: 2rem;
+}
+
+.data .city{
+    font-size: 1.4rem;
+}
+.stats {
+    display: flex;
+    flex-direction: row;
+    /* align-items: flex-end; */
+    
+    margin-bottom: -10rem;
+}
+
+.stats>* {
+    padding: 3rem 3rem;
+    font-size: 1.8rem;
+    text-align: center;
+    justify-content: space-around;
+    font-weight: bold;
+}
+
+.stat>span {
+    margin-top: 15rem;
+    flex-wrap: nowrap;
+    font-size: 1.2rem;
+    font-weight: 200;
+    color: var(--gray);
+    letter-spacing: 0.2rem;
+} 
+
+footer {
+    width: 100%;
+    height: 2.3rem;
+    position: absolute;
+    background-color: #111;
+    color: #fff;
+    bottom: 0;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+/* @media (max-width: 1200px) {
+    body{
+        padding: 0;
+    }
+
+    .container{
+        height: 100vh;
+    }
+} */
